@@ -1,11 +1,12 @@
 import Title from './components/Title';
-import PostRequest from './examples/3-post-request';
+import Setup from './examples/4-global-instance';
+import './global/axios'
 
 function App() {
   return (
     <main>
       <Title />
-      <PostRequest />
+      <Setup />
     </main>
   );
 }
