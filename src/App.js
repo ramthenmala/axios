@@ -1,11 +1,12 @@
 import Title from './components/Title';
-import SetUp from './examples/2-headers';
+import Setup from './examples/4-global-instance';
+import './global/axios'
 
 function App() {
   return (
     <main>
       <Title />
-      <SetUp />
+      <Setup />
     </main>
   );
 }
