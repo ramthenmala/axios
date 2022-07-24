@@ -7,8 +7,21 @@ const url = 'https://icanhazdadjoke.com/';
 const Headers = () => {
   const [joke, setJoke] = useState('random dad joke');
 
+  const fetchData = async() => {
+    try {
+      const {data} = await axios(url, {
+        headers: {
+          Accept: 'application/json'
+        }
+      })
+      setJoke(data.joke)
+    } catch (error) {
+      console.log('error ', error.response)
+    }
+  }
+
   const fetchDadJoke = async () => {
-    console.log('fetch dad joke');
+    fetchData();
   };
 
   return (
